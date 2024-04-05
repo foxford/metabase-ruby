@@ -36,11 +36,12 @@ module Metabase
       #
       # @param card_id [Integer, String] Card ID
       # @param format [Symbol, String] Export format (csv, json, xlsx)
+      # @param format_rows [Boolean] Format rows
       # @param params [Hash] Request body
       # @return [Array<Hash>, String] Query results
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apicardcard-idqueryexport-format
-      def query_card(card_id, format: :json, **params)
-        post("/api/card/#{card_id}/query/#{format}", **params)
+      def query_card(card_id, format: :json, format_rows: false, **params)
+        post("/api/card/#{card_id}/query/#{format}", **params.merge(format_rows: format_rows))
       end
     end
   end

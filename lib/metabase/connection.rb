@@ -30,10 +30,13 @@ module Metabase
 
     def request(method, path, params)
       headers = params.delete(:headers)
+      query_params = params.delete(:query_params) || {}
+      query_params[:format_rows] = params.delete(:format_rows)
 
       response = connection.public_send(method, path, params) do |request|
         request.headers['X-Metabase-Session'] = @token if @token
         headers&.each_pair { |k, v| request.headers[k] = v }
+        request.params = query_params.compact
       end
 
       error = Error.from_response(response)
