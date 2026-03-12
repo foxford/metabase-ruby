@@ -60,7 +60,7 @@ http_interactions:
   recorded_at: Sun, 07 Jun 2020 06:55:08 GMT
 - request:
     method: delete
-    uri: http://localhost:3030/api/session?session_id=bca8d83e-7d37-4670-81b6-560ac452773e
+    uri: http://localhost:3030/api/session
     body:
       encoding: US-ASCII
       string: ''

@@ -60,7 +60,7 @@ http_interactions:
   recorded_at: Sun, 07 Jun 2020 06:41:29 GMT
 - request:
     method: post
-    uri: http://localhost:3030/api/card/1/query/csv
+    uri: http://localhost:3030/api/card/1/query/csv?format_rows=false
     body:
       encoding: UTF-8
       string: "{}"
