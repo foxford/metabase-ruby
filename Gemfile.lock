@@ -7,7 +7,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.8)
+    addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
     amazing_print (1.2.2)
     ast (2.4.1)
@@ -37,7 +37,7 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
       reline (>= 0.6.0)
-    public_suffix (7.0.0)
+    public_suffix (7.0.5)
     rainbow (3.0.0)
     rake (13.0.3)
     regexp_parser (2.0.3)
